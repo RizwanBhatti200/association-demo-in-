@@ -25,6 +25,7 @@
     <%= form.label :published %>
     <%= form.check_box :published %>
   </div>
+  <%= form.hidden_field :user_id, value: params[:user_id] || post.user_id %>
 
   <div class="actions">
     <%= form.submit %>
