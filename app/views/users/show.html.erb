@@ -9,6 +9,24 @@
   <strong>Password:</strong>
   <%= @user.password %>
 </p>
+<% if @user.profile.present? %>
+  <p>
+    <strong>First Name:</strong>
+    <%= @user.profile.first_name  %>
+  </p>
+  <p>
+    <strong>Last Name:</strong>
+    <%= @user.profile.last_name %>
+  </p>
+  <p>
+    <strong>Age:</strong>
+    <%= @user.profile.age %>
+  </p>
+  <p>
+    <strong>Address:</strong>
+    <%= @user.profile.address %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
