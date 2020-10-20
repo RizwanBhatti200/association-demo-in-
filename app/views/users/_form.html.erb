@@ -21,7 +21,7 @@
     <%= form.text_field :password %>
   </div>
 
-  <%= render "profile", inner_form: form %>
+  <%= render "profile", f: form if user.persisted? %>
 
   <div class="actions">
     <%= form.submit %>

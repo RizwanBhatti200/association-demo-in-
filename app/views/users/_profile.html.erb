@@ -1,19 +1,23 @@
+
+<%= f.fields_for :profile do |f| %>
 <div class="field">
-  <%= inner_form.label :first_name %>
-  <%= inner_form.text_field :first_name %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
 </div>
 
 <div class="field">
-  <%= inner_form.label :last_name %>
-  <%= inner_form.text_field :last_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
 </div>
 
 <div class="field">
-  <%= inner_form.label :age %>
-  <%= inner_form.number_field :age, min: 0, max:100 %>
+  <%= f.label :age %>
+  <%= f.number_field :age, min: 0, max:100 %>
    </div>
 
   <div class="field">
-  <%= inner_form.label :address %>
-  <%= inner_form.text_field :address %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
 </div>
+<% end %>
+
