@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %> |
+<%= link_to 'New Post', new_post_path(user_id: @user.id) %>
+
 <p>
   <strong>Email:</strong>
   <%= @user.email %>
@@ -27,6 +31,10 @@
     <%= @user.profile.address %>
   </p>
 <% end %>
+
+<h2>COMMENTS</h2>
+<%= render "comments/comments"%>
+<%= render "comments/form"%>
 
 <h1>Posts</h1>
 
@@ -58,6 +66,3 @@
 
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %> |
-<%= link_to 'New Post', new_post_path(user_id: @user.id) %>
