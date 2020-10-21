@@ -15,5 +15,9 @@
   <%= @post.published %>
 </p>
 
+<h2>COMMENTS</h2>
+<%= render "comments/comments"%>
+<%= render "comments/form"%>
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
