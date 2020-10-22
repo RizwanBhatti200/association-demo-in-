@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   validates :email, uniqueness: true, :on => :create
   after_validation :normalize_name, on: :create
+
   has_one :profile
   has_many :posts
   has_many :comments, as: :commentable
@@ -13,7 +14,8 @@ class User < ApplicationRecord
   #   validates :email, uniqueness: true
   # end
   def normalize_name
-
-      self.email = email.downcase
+    self.email = email.downcase
   end
+
+
 end
